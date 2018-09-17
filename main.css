@@ -1,1 +1,12 @@
+body{
+    background-color:LightGrey;
+}
 
+h2{
+    background-color:DeepSkyBlue;
+}
+
+div{
+    position: absolute;
+    right : 30px;
+}
