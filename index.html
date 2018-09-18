@@ -5,16 +5,22 @@
 </head>
 
  <body>
+    
     <h1>James Christopherson</h1>
     <h2>About</h2>
         <p>One of the upcoming stars in the BYU CS program. James is activley trying to lift those around him to greater hights. 
-        He usually accomplishes this by: <img src="Profile Picture.jpg" alt="I'm obviously Batman" align = "right"></p>
+        He usually accomplishes this by: <img id="picture" src="Profile Picture.jpg" alt="I'm obviously Batman" align = "right"></p>
         <ul>
             <li>asking question</li>
             <li>presenting problems</li>
             <li>letting his peers work through it will little interuption</li>
+            <li id="improve"></li>
         </ul>
-    <br><br>
+        <p>What do you think I should add?</p>
+        <form> 
+        <input type="text" id="whatDoYouThink">
+        <button id="p1" onclick="myFunction(event)">Click me</button>
+        </form>
     <h2>Projects</h2>
         <ul>
             <li><a href="http://54.173.114.113/index.html">Hello World</a></li>
@@ -23,14 +29,30 @@
         </ul>
     <h2>Experience</h2>
         <ul>
-             <li>Business Owner</li>
+            <li>Business Owner</li>
             <li>BYU CS Department Classes</li>
-             <li>Vehicle Programming and Initilizations</li>
+            <li>Vehicle Programming and Initilizations</li>
         </ul>
     <h2>Links</h2>
         <ul>
-         <li><a href="https://github.com/anstarfury">GitHub</a></li>
-         <li><a href="https://www.w3schools.com/">W3Shcool</a></li>
+            <li><a href="https://github.com/anstarfury">GitHub</a></li>
+            <li><a href="https://www.w3schools.com/">W3Shcool</a></li>
         </ul>
  </body>
+ 
+    <script>
+    var pictures = ["Profile Picture.jpg", "Second Picture.jpg"];
+    var whichOne = 0;
+    
+        function myFunction(event){
+            if(whichOne == 0)
+                whichOne = 1;
+            else
+                whichOne = 0;
+            document.getElementById("picture").src = pictures[whichOne];
+            document.getElementById("improve").innerHTML =document.getElementById("whatDoYouThink").value;
+            event.preventDefault();
+        }
+    </script>
+
 </html>
